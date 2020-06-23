@@ -177,7 +177,7 @@ public class OCRScannerActivity extends AppCompatActivity {
         HashMap<String, Object> data = new HashMap<>();
         data.put("kategori", kategori);
         data.put("tanggal", tanggal);
-        data.put("total_pengeluaran", pengeluaran);
+        data.put("pengeluaran", pengeluaran);
 
         reference.push().setValue(data).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override

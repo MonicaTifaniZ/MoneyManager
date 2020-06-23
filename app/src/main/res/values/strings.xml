@@ -19,4 +19,5 @@
     <string name="ocr_failure">No text captured</string>
     <string name="ocr_error">"Error reading text: %1$s"</string>
     <string name="stiki_link"><a href="http://www.stiki.ac.id">www.stiki.ac.id</a></string>
+
 </resources>

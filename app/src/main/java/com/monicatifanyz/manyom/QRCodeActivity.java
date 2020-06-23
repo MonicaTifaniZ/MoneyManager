@@ -119,6 +119,8 @@ public class QRCodeActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
         if (result != null){
+
+
             if (result.getContents()== null) {
                 Toast.makeText(this, "Hasil tidak ditemukan", Toast.LENGTH_SHORT).show();
 
