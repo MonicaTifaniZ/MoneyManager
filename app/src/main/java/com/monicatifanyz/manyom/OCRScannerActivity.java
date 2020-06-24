@@ -4,11 +4,13 @@ import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.format.DateFormat;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -33,17 +35,19 @@ public class OCRScannerActivity extends AppCompatActivity {
 
     Button buttonTanggal , buttonSimpan, buttonOCRR;
     Spinner spinner;
-    TextView textViewTanggal, textViewTotal;
+    TextView textViewTanggal;
+    EditText editTextOCRTotal;
 
     DatabaseReference databaseReference ;
 
     private int  REQUEST_CODE_PERMISSION = 101;
+    private String TAG = "TAG";
 
 
     private String[] item = {"Makanan dan Minuman","Pendidikan","Transportasi","Kesehatan",
             "Lainnya"};
 
-    String kategori, tanggal;
+    String kategori, tanggal, pengeluaran;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +55,7 @@ public class OCRScannerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_text_detection);
 
 
-        textViewTotal = findViewById(R.id.tvQRTotal);
+        editTextOCRTotal = findViewById(R.id.editTextQRTotal);
         textViewTanggal = findViewById(R.id.txtTanggal);
         buttonSimpan = findViewById(R.id.btnSimpan);
         buttonTanggal = findViewById(R.id.btnTanggal);
@@ -143,21 +147,23 @@ public class OCRScannerActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-       if (resultCode == RC_OCR_CAPTURE){
-           if (resultCode == CommonStatusCodes.SUCCESS){
-               if (data !=null){
-                   String text = data.getStringExtra(OcrCaptureActivity.TextBlockObject);
-                   text = text.replaceAll("[^\\d.]", "");
-                   //statusMessage.setText(R.string.ocr_success);
-                   textViewTotal.setText(text);
-                   //Log.d(TAG, "Text read: " + text);
-               } else {
-                   //statusMessage.setText(R.string.ocr_failure);
-//                    Log.d(TAG, "No Text captured, intent data is null");
-               }
-           }
+        if (requestCode == RC_OCR_CAPTURE){
+                if (resultCode == CommonStatusCodes.SUCCESS){
+                    if (data !=null){
+                        String text = data.getStringExtra(OcrCaptureActivity.TextBlockObject);
+                        text = text.replaceAll("[^\\d.]", "");
+                        //statusMessage.setText(R.string.ocr_success);
+                        editTextOCRTotal.setText(text);
+                        pengeluaran = editTextOCRTotal.toString();
+                        //Log.d(TAG, "Text read: " + text);
+                    } else {
+                        //statusMessage.setText(R.string.ocr_failure);
+                    Log.d(TAG, "No Text captured, intent data is null");
+                    }
+                }
 
-       }
+        }
+
        else {
 
            super.onActivityResult(requestCode, resultCode, data);
@@ -173,7 +179,6 @@ public class OCRScannerActivity extends AppCompatActivity {
     void simpanData() {
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Pengeluaran");
 
-        Double pengeluaran = Double.parseDouble(textViewTotal.getText().toString());
 
         HashMap<String, Object> data = new HashMap<>();
         data.put("kategori", kategori);

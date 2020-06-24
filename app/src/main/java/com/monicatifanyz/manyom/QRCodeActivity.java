@@ -24,11 +24,10 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.util.Calendar;
 import java.util.HashMap;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class QRCodeActivity extends AppCompatActivity {
 
@@ -38,14 +37,8 @@ public class QRCodeActivity extends AppCompatActivity {
 
     //qr code scanner object
     private  IntentIntegrator intentIntegrator;
-
-//    int PERMISSIONS_REQUEST_CAMERA=0;
-//    ZXingScannerView scannerView;
-
-    //Menginisialisasi Menu Item pada Variable Array
-    //private String[] kategori  = {"Makanan dan Minuman", "Kesehatan", "Pendidikan",
-     //                           "Transportasi", "Lainnya"};
-
+    private Pattern regex;
+    private Matcher matcher;
 
     DatabaseReference databaseReference;
 
@@ -61,6 +54,7 @@ public class QRCodeActivity extends AppCompatActivity {
 //        scannerView = new ZXingScannerView(this);
         setContentView(R.layout.activity_q_r_code);
 
+        regex = Pattern.compile("(\\d+(?:\\.\\d+)?)");
         textViewQRTotal = findViewById(R.id.tvQRTotal);
         textViewTanggal = findViewById(R.id.txtViewTanggal);
         buttonSimpan = findViewById(R.id.btnSimpan);
@@ -119,28 +113,27 @@ public class QRCodeActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
         if (result != null){
-
-
-            if (result.getContents()== null) {
-                Toast.makeText(this, "Hasil tidak ditemukan", Toast.LENGTH_SHORT).show();
-
+            matcher = regex.matcher(result.getContents());
+            if (matcher.find()) {
+                textViewQRTotal.setText(String.valueOf(result.getContents()));
             }else {
+                Toast.makeText(this, "Hasil tidak ditemukan", Toast.LENGTH_SHORT).show();
                 // jika qrcode berisi data
-                try {
-                    // converting the data json]
-                    JSONObject object = new JSONObject(result.getContents());
-
-                    // atur nilai ke textviews
-                    textViewTanggal.setText(object.getString("nama"));
-                     textViewQRTotal.setText(String.valueOf(object.getDouble(toString())));
-
-
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                    // jika format encoded tidak sesuai maka hasil
-                    // ditampilkan ke toast
-                    Toast.makeText(this, result.getContents(), Toast.LENGTH_SHORT).show();
-                }
+//                try {
+//                    // converting the data json]
+//                    JSONObject object = new JSONObject(result.getContents());
+//
+//                    // atur nilai ke textviews
+//                    textViewTanggal.setText(object.getString("nama"));
+//                     textViewQRTotal.setText(String.valueOf(object.getDouble(toString())));
+//
+//
+//                } catch (JSONException e) {
+//                    e.printStackTrace();
+//                    // jika format encoded tidak sesuai maka hasil
+//                    // ditampilkan ke toast
+//                    Toast.makeText(this, result.getContents(), Toast.LENGTH_SHORT).show();
+//                }
 
             }
         }
