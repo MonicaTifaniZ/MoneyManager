@@ -9,7 +9,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
-import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -32,18 +31,19 @@ public class OCRScannerActivity extends AppCompatActivity {
 
     private static final int RC_OCR_CAPTURE = 9003;
 
-    EditText editTextOCRTotal;
     Button buttonTanggal , buttonSimpan, buttonOCRR;
     Spinner spinner;
-    TextView textViewTanggal;
+    TextView textViewTanggal, textViewTotal;
 
     DatabaseReference databaseReference ;
+
+    private int  REQUEST_CODE_PERMISSION = 101;
 
 
     private String[] item = {"Makanan dan Minuman","Pendidikan","Transportasi","Kesehatan",
             "Lainnya"};
 
-    String kategori, tanggal, pengeluaran;
+    String kategori, tanggal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +51,7 @@ public class OCRScannerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_text_detection);
 
 
-        editTextOCRTotal = findViewById(R.id.tvQRTotal);
+        textViewTotal = findViewById(R.id.tvQRTotal);
         textViewTanggal = findViewById(R.id.txtTanggal);
         buttonSimpan = findViewById(R.id.btnSimpan);
         buttonTanggal = findViewById(R.id.btnTanggal);
@@ -149,8 +149,7 @@ public class OCRScannerActivity extends AppCompatActivity {
                    String text = data.getStringExtra(OcrCaptureActivity.TextBlockObject);
                    text = text.replaceAll("[^\\d.]", "");
                    //statusMessage.setText(R.string.ocr_success);
-                   editTextOCRTotal.setText(text);
-                   pengeluaran = editTextOCRTotal.toString();
+                   textViewTotal.setText(text);
                    //Log.d(TAG, "Text read: " + text);
                } else {
                    //statusMessage.setText(R.string.ocr_failure);
@@ -173,6 +172,8 @@ public class OCRScannerActivity extends AppCompatActivity {
 
     void simpanData() {
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Pengeluaran");
+
+        Double pengeluaran = Double.parseDouble(textViewTotal.getText().toString());
 
         HashMap<String, Object> data = new HashMap<>();
         data.put("kategori", kategori);
