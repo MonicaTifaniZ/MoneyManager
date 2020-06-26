@@ -1,13 +1,13 @@
 package com.monicatifanyz.manyom;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
     CardView cvText, cvQRCode, cvPetunjuk, cvTentang, cvLaporan;
     @Override
@@ -56,8 +56,8 @@ public class MainActivity extends AppCompatActivity {
         cvLaporan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent m = new Intent(MainActivity.this, ListData.class);
-                startActivity(m);
+                Intent laporan = new Intent(MainActivity.this, ListData.class);
+                startActivity(laporan);
             }
         });
 

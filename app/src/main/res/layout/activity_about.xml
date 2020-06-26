@@ -7,86 +7,204 @@
     android:layout_height="match_parent"
     tools:context=".AboutActivity"
     android:orientation="vertical"
+    android:layout_marginBottom="20dp"
     android:background="@drawable/bg">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:text="About Us"
+        android:textColor="@android:color/black"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:textAlignment="center"/>
 
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="75dp"
+        app:cardCornerRadius="50dp"
         android:innerRadius="0dp"
         android:padding="9dp"
         android:layout_margin="12dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="25dp"
         android:shape="ring">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:gravity="center">
 
-            <ImageView
-                android:id="@+id/image_stiki"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_gravity="center"
-                android:layout_margin="14dp"
-                android:src="@drawable/stiki"
-                android:layout_marginBottom="12dp"/>
-
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:textAlignment="center"
-                android:text="Supported by :"/>
+                android:layout_height="250dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:textAlignment="center"
-                android:layout_margin="14dp"
-                android:text="@string/stiki_link"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginLeft="35dp"
+                    android:gravity="left|center">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textAlignment="center"
+                        android:text="Supported by :"/>
+
+                    <ImageView
+                        android:id="@+id/image_stiki"
+                        android:layout_width="110dp"
+                        android:layout_height="110dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="14dp"
+                        android:src="@drawable/stiki"
+                        android:layout_marginBottom="12dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="STIKI Malang"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="2dp"
+                        android:textColor="@color/common_google_signin_btn_text_dark_focused"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Jl Raya Tidar No.100 Malang"
+                        android:textSize="10dp"
+                        android:textColor="@color/common_google_signin_btn_text_dark_focused"/>
+
+                    <TextView
+                        android:id="@+id/stiki_link"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textAlignment="center"
+                        android:layout_marginBottom="14dp"
+                        android:text="@string/stiki_link"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginLeft="25dp"
+                    android:gravity="left|center">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textAlignment="center"
+                        android:text="Developed by :"/>
+
+                    <ImageView
+                        android:id="@+id/image_mon"
+                        android:layout_width="110dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="14dp"
+                        android:src="@drawable/mon"
+                        android:scaleType="fitXY"
+                        android:layout_marginBottom="12dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Monica Tifani Zahara"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@color/common_google_signin_btn_text_dark_focused"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Find me on LinkedIn :"
+                        android:textSize="10dp"
+                        android:textColor="@color/common_google_signin_btn_text_dark_focused"/>
+
+                    <TextView
+                        android:id="@+id/mon_link"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textAlignment="center"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="12dp"
+                        android:text="@string/mon_link"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="75dp"
+        app:cardCornerRadius="50dp"
         android:innerRadius="0dp"
         android:padding="9dp"
         android:layout_margin="12dp"
         android:layout_marginTop="15dp"
         android:shape="ring">
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="250dp"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
 
-            <ImageView
-                android:id="@+id/image_mon"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_gravity="center"
-                android:layout_margin="14dp"
-                android:src="@drawable/mon"
-                android:layout_marginBottom="12dp"/>
-
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:textAlignment="center"
-                android:text="Developer :"/>
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:textAlignment="center"
-                android:layout_margin="14dp"
-                android:text="Monica Tifani Zahara"/>
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginBottom="12dp"
+                    android:scaleType="center"
+                    android:src="@drawable/logo_mayo" />
+
+                <TextView
+                    android:id="@+id/ket"
+                    android:ems="2"
+                    android:textStyle="normal"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/keterangan">
+
+                </TextView>
+
+            </LinearLayout>
+
+
+
+
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 

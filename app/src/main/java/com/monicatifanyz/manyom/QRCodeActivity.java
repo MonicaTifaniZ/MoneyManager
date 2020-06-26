@@ -1,5 +1,6 @@
 package com.monicatifanyz.manyom;
 
+import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,13 +10,13 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -29,9 +30,10 @@ import java.util.HashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class QRCodeActivity extends AppCompatActivity {
+public class QRCodeActivity extends Activity {
 
-    TextView textViewQRTotal, textViewTanggal;
+    TextView  textViewTanggal;
+    EditText edittextQRTotal;
     Button buttonTanggal , buttonSimpan, buttonScan;
     Spinner spinner;
 
@@ -55,8 +57,8 @@ public class QRCodeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_q_r_code);
 
         regex = Pattern.compile("(\\d+(?:\\.\\d+)?)");
-        textViewQRTotal = findViewById(R.id.tvQRTotal);
-        textViewTanggal = findViewById(R.id.txtViewTanggal);
+        edittextQRTotal = findViewById(R.id.editTextQRTotal);
+        textViewTanggal = findViewById(R.id.txtTanggal);
         buttonSimpan = findViewById(R.id.btnSimpan);
         buttonTanggal = findViewById(R.id.btnTanggal);
         buttonScan = findViewById(R.id.buttonScanQR);
@@ -115,7 +117,9 @@ public class QRCodeActivity extends AppCompatActivity {
         if (result != null){
             matcher = regex.matcher(result.getContents());
             if (matcher.find()) {
-                textViewQRTotal.setText(String.valueOf(result.getContents()));
+                edittextQRTotal.setText(String.valueOf(result.getContents()));
+                pengeluaran = result.getContents();
+
             }else {
                 Toast.makeText(this, "Hasil tidak ditemukan", Toast.LENGTH_SHORT).show();
                 // jika qrcode berisi data
@@ -184,9 +188,9 @@ public class QRCodeActivity extends AppCompatActivity {
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Pengeluaran");
 
         HashMap<String, Object> data = new HashMap<>();
-        data.put("kategori", kategori);
-        data.put("tanggal", tanggal);
-        data.put("total_pengeluaran", pengeluaran);
+        data.put("Kategori", kategori);
+        data.put("Tanggal", tanggal);
+        data.put("Pengeluaran", pengeluaran);
 
         reference.push().setValue(data).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override

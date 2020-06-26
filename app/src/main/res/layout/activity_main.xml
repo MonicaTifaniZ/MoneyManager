@@ -23,7 +23,7 @@
             android:layout_centerHorizontal="true"
             android:text="@string/title"
             android:textColor="@android:color/black"
-            android:textSize="30sp"
+            android:textSize="40sp"
             android:textStyle="bold"
             android:textAlignment="center"/>
 

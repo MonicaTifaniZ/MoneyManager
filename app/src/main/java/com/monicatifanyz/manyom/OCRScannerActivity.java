@@ -1,5 +1,6 @@
 package com.monicatifanyz.manyom;
 
+import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,7 +18,6 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.common.api.CommonStatusCodes;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -28,7 +28,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.Calendar;
 import java.util.HashMap;
 
-public class OCRScannerActivity extends AppCompatActivity {
+public class OCRScannerActivity extends Activity {
 
 
     private static final int RC_OCR_CAPTURE = 9003;
@@ -148,26 +148,24 @@ public class OCRScannerActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         if (requestCode == RC_OCR_CAPTURE){
-                if (resultCode == CommonStatusCodes.SUCCESS){
-                    if (data !=null){
-                        String text = data.getStringExtra(OcrCaptureActivity.TextBlockObject);
-                        text = text.replaceAll("[^\\d.]", "");
-                        //statusMessage.setText(R.string.ocr_success);
-                        editTextOCRTotal.setText(text);
-                        pengeluaran = editTextOCRTotal.toString();
-                        //Log.d(TAG, "Text read: " + text);
-                    } else {
-                        //statusMessage.setText(R.string.ocr_failure);
-                    Log.d(TAG, "No Text captured, intent data is null");
-                    }
+            if (resultCode == CommonStatusCodes.SUCCESS){
+                if (data !=null){
+                    String text = data.getStringExtra(OcrCaptureActivity.TextBlockObject);
+                    text = text.replaceAll("[^\\d.]", "");
+                    //statusMessage.setText(R.string.ocr_success);
+                    editTextOCRTotal.setText(text);
+                    pengeluaran = text;
+                    //Log.d(TAG, "Text read: " + text);
+                } else {
+                    //statusMessage.setText(R.string.ocr_failure);
+                    Log.e(TAG, "No Text captured, intent data is null");
                 }
-
+            }
         }
-
-       else {
-
-           super.onActivityResult(requestCode, resultCode, data);
-       }
+        else {
+            Log.e(TAG, "requestCode "+requestCode+" error");
+            super.onActivityResult(requestCode, resultCode, data);
+        }
     }
 
 
@@ -179,11 +177,10 @@ public class OCRScannerActivity extends AppCompatActivity {
     void simpanData() {
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Pengeluaran");
 
-
         HashMap<String, Object> data = new HashMap<>();
-        data.put("kategori", kategori);
-        data.put("tanggal", tanggal);
-        data.put("pengeluaran", pengeluaran);
+        data.put("Kategori", kategori);
+        data.put("Tanggal", tanggal);
+        data.put("Pengeluaran", pengeluaran);
 
         reference.push().setValue(data).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
@@ -196,5 +193,7 @@ public class OCRScannerActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Gagal disimpan", Toast.LENGTH_SHORT).show();
             }
         });
+
+
     }
 }

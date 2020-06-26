@@ -19,5 +19,7 @@
     <string name="ocr_failure">No text captured</string>
     <string name="ocr_error">"Error reading text: %1$s"</string>
     <string name="stiki_link"><a href="http://www.stiki.ac.id">www.stiki.ac.id</a></string>
+    <string name="keterangan">Mayom merupakan aplikasi yang digunakan untuk mencatat pengeluaran keuangan anda dengan bantuan Sensor OCR dan QR Code Scanner.</string>
+    <string name="mon_link"><a href="https://www.linkedin.com/in/monica-tifani-zahara-861991196/">Monica Tifani Zahara</a></string>
 
 </resources>
