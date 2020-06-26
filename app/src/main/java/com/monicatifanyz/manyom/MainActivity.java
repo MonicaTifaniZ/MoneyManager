@@ -40,7 +40,7 @@ public class MainActivity extends Activity {
         cvPetunjuk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent k = new Intent(MainActivity.this, OCRScannerActivity.class);
+                Intent k = new Intent(MainActivity.this, Help.class);
                 startActivity(k);
             }
         });

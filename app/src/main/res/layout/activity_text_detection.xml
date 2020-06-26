@@ -87,7 +87,7 @@
                             android:ems="10"
                             android:inputType="number"
                             android:hint="Pilih Tanggal"
-                            android:layout_marginRight="60dp"
+                            android:layout_marginRight="56dp"
                             android:layout_marginLeft="9dp"/>
 
                         <LinearLayout
