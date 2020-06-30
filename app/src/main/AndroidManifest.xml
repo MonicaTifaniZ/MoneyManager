@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.monicatifanyz.manyom">
+    package="id.ac.stiki.doleno.mayom">
 
     <uses-feature android:name="android.hardware.camera" />
     <uses-permission android:name="android.permission.CAMERA" />
@@ -13,28 +13,20 @@
         android:roundIcon="@mipmap/ic_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SplashScreenActivity">
+        <activity android:name="id.ac.stiki.doleno.mayom.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AboutActivity" />
-        <activity android:name=".Help" />
-        <activity android:name=".ListData" />
-        <activity android:name=".QRCodeActivity" />
-        <activity android:name=".OCRScannerActivity" />
-        <activity android:name=".MainActivity" >
-
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".OcrCaptureActivity" />
-
+        <activity android:name="id.ac.stiki.doleno.mayom.AboutActivity" />
+        <activity android:name="id.ac.stiki.doleno.mayom.ListData" />
+        <activity android:name="id.ac.stiki.doleno.mayom.Help" />
+        <activity android:name="id.ac.stiki.doleno.mayom.QRCodeActivity" />
+        <activity android:name="id.ac.stiki.doleno.mayom.OCRScannerActivity" />
+        <activity android:name="id.ac.stiki.doleno.mayom.MainActivity"/> >
+        <activity android:name="id.ac.stiki.doleno.mayom.OcrCaptureActivity" />
         <meta-data
             android:name="com.google.android.gms.vision.DEPENDENCIES"
             android:value="ocr" />

@@ -1,10 +1,10 @@
 <resources>
-    <string name="app_name">Manyom</string>
+    <string name="app_name">Mayom</string>
     <string name="title">Mayom</string>
     <string name="menu_text">Text Recognition</string>
     <string name="menu_qr">QR Scanner</string>
-    <string name="menu_report">Report</string>
-    <string name="menu_help">Help</string>
+    <string name="menu_report">Reports</string>
+    <string name="menu_help">Tutorial</string>
     <string name="menu_about">About</string>
     <string name="ok">OK</string>
     <string name="permission_camera_rationale">Access to the camera is needed for detection</string>
@@ -21,5 +21,6 @@
     <string name="stiki_link"><a href="http://www.stiki.ac.id">www.stiki.ac.id</a></string>
     <string name="keterangan">Mayom merupakan aplikasi yang digunakan untuk mencatat pengeluaran keuangan anda dengan bantuan Sensor OCR dan QR Code Scanner.</string>
     <string name="mon_link"><a href="https://www.linkedin.com/in/monica-tifani-zahara-861991196/">Monica Tifani Zahara</a></string>
+
 
 </resources>

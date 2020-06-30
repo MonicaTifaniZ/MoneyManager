@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "234969940804",
-    "firebase_url": "https://mayom-8c683.firebaseio.com",
-    "project_id": "mayom-8c683",
-    "storage_bucket": "mayom-8c683.appspot.com"
+    "project_number": "1065505912029",
+    "firebase_url": "https://mayom-project.firebaseio.com",
+    "project_id": "mayom-project",
+    "storage_bucket": "mayom-project.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:234969940804:android:1116c94b602c65c48d4d11",
+        "mobilesdk_app_id": "1:1065505912029:android:baf126cbc1bae384885734",
         "android_client_info": {
-          "package_name": "com.monicatifanyz.manyom"
+          "package_name": "id.ac.stiki.doleno.mayom"
         }
       },
       "oauth_client": [
         {
-          "client_id": "234969940804-109pihbmeqto144221m9s1l0fg0c1n4m.apps.googleusercontent.com",
+          "client_id": "1065505912029-7tatuqkc13a9sojd3epkb5fe4godngih.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCYEpx4prNq8BSwjKR1mu3p3HEyV42lUbo"
+          "current_key": "AIzaSyCWwQQk7sECkOz4qmOyIqmFKTN4lw9j0YI"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "234969940804-109pihbmeqto144221m9s1l0fg0c1n4m.apps.googleusercontent.com",
+              "client_id": "1065505912029-7tatuqkc13a9sojd3epkb5fe4godngih.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

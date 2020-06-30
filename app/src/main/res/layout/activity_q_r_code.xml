@@ -51,7 +51,7 @@
                     android:id="@+id/spKategori"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="9dp">
+                    android:layout_margin="9dp">
 
                 </Spinner>
 
@@ -78,27 +78,23 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:ems="10"
+                        android:layout_gravity="left|center"
                         android:inputType="number"
+                        android:textSize="14sp"
                         android:hint="Pilih Tanggal"
-                        android:layout_marginRight="56dp"
                         android:layout_marginLeft="9dp"/>
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                    <Button
+                        android:id="@+id/btnTanggal"
+                        android:layout_width="50dp"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-                        <Button
-                            android:id="@+id/btnTanggal"
-                            android:layout_width="50dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="80dp"
-                            android:layout_gravity="left"
-                            android:gravity="left"
-                            android:layout_toRightOf="@+id/etanggal"
-                            android:background="@drawable/ic_date"
-                            android:text="" />
+                        android:layout_marginLeft="100dp"
+                        android:layout_gravity="right"
+                        android:gravity="right"
+                        android:layout_toRightOf="@+id/etanggal"
+                        android:background="@drawable/ic_date"
+                        android:text="" />
 
-                    </LinearLayout>
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
@@ -111,20 +107,6 @@
                 app:cardCornerRadius="8dp"
                 app:cardUseCompatPadding="true">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Total Pengeluaran"
-                        android:layout_marginLeft="9dp"
-                        android:layout_marginBottom="9dp"
-                        android:textSize="18sp"
-                        android:textStyle="bold"/>
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -132,10 +114,11 @@
 
                         <EditText
                             android:id="@+id/editTextQRTotal"
-                            android:layout_width="300dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
                             android:hint="Pengeluaran anda.."
+                            android:textSize="14sp"
                             android:layout_marginBottom="9dp"/>
 
                         <Button
@@ -144,12 +127,9 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="0dp"
                             android:layout_marginBottom="0dp"
-                            android:layout_marginLeft="2dp"
+                            android:layout_marginLeft="135dp"
                             android:background="@drawable/ic_scan"
                             android:textColor="@color/cardview_light_background" />
-
-
-                    </LinearLayout>
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>

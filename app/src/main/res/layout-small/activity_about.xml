@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="id.ac.stiki.doleno.mayom.AboutActivity"
+    android:orientation="vertical"
+    android:layout_marginBottom="20dp"
+    android:background="@drawable/bg">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_centerHorizontal="true"
+        android:text="About Us"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textAlignment="center"/>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="3dp"
+        android:innerRadius="0dp"
+        android:padding="9dp"
+        android:layout_margin="4dp"
+        android:layout_marginTop="4dp"
+        android:shape="ring">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginLeft="1dp"
+                    android:gravity="left|center">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textAlignment="center"
+                        android:textSize="8sp"
+                        android:text="Supported by :"/>
+
+                    <ImageView
+                        android:id="@+id/image_stiki"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="1dp"
+                        android:src="@drawable/stiki"
+                        android:layout_marginBottom="4dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="STIKI Malang"
+                        android:textStyle="bold"
+                        android:textSize="4sp"
+                        android:layout_marginBottom="2dp"
+                        android:textColor="@color/common_google_signin_btn_text_dark_focused"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Jl Raya Tidar No.100 Malang"
+                        android:textSize="6sp"
+                        android:textColor="@color/common_google_signin_btn_text_dark_focused"/>
+
+                    <TextView
+                        android:id="@+id/stiki_link"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textAlignment="center"
+                        android:textSize="4sp"
+                        android:layout_marginBottom="1dp"
+                        android:text="@string/stiki_link"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginLeft="2dp"
+                    android:gravity="left|center">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textAlignment="center"
+                        android:textSize="8sp"
+                        android:text="By :"/>
+
+                    <ImageView
+                        android:id="@+id/image_mon"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="1dp"
+                        android:src="@drawable/mon"
+                        android:scaleType="fitXY"
+                        android:layout_marginBottom="4dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Monica Tifani Zahara"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="1dp"
+                        android:textSize="4sp"
+                        android:textColor="@color/common_google_signin_btn_text_dark_focused"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Find me on LinkedIn :"
+                        android:textSize="6sp"
+                        android:textColor="@color/common_google_signin_btn_text_dark_focused"/>
+
+                    <TextView
+                        android:id="@+id/mon_link"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textAlignment="center"
+                        android:layout_marginTop="2dp"
+                        android:textSize="4sp"
+                        android:layout_marginBottom="1dp"
+                        android:text="@string/mon_link"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="4dp">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="19dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="2dp"
+                        android:scaleType="center"
+                        android:src="@drawable/logo_mayo" />
+
+                    <TextView
+                        android:id="@+id/ket"
+                        android:ems="2"
+                        android:textStyle="normal"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="6sp"
+                        android:layout_marginBottom="5dp"
+                        android:text="@string/keterangan">
+
+                    </TextView>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>
