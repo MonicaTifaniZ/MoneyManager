@@ -43,11 +43,11 @@ import com.google.android.gms.vision.CameraSource;
 import com.google.android.gms.vision.text.TextBlock;
 import com.google.android.gms.vision.text.TextRecognizer;
 import com.google.android.material.snackbar.Snackbar;
-import id.ac.stiki.doleno.mayom.R;
-import id.ac.stiki.doleno.mayom.camera.CameraSourcePreview;
-import id.ac.stiki.doleno.mayom.camera.GraphicOverlay;
 
 import java.io.IOException;
+
+import id.ac.stiki.doleno.mayom.camera.CameraSourcePreview;
+import id.ac.stiki.doleno.mayom.camera.GraphicOverlay;
 
 /**
  * Activity for the multi-tracker app.  This app detects text and displays the value with the

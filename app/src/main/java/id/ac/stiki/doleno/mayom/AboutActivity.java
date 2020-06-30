@@ -6,7 +6,6 @@ import android.text.method.LinkMovementMethod;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import id.ac.stiki.doleno.mayom.R;
 
 public class AboutActivity extends Activity {
     ImageView imageView;

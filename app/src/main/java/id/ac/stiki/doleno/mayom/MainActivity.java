@@ -7,8 +7,6 @@ import android.view.View;
 
 import androidx.cardview.widget.CardView;
 
-import id.ac.stiki.doleno.mayom.R;
-
 public class MainActivity extends Activity {
 
     CardView cvText, cvQRCode, cvPetunjuk, cvTentang, cvLaporan;

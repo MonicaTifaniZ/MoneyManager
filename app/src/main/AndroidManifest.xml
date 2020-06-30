@@ -25,7 +25,7 @@
         <activity android:name="id.ac.stiki.doleno.mayom.Help" />
         <activity android:name="id.ac.stiki.doleno.mayom.QRCodeActivity" />
         <activity android:name="id.ac.stiki.doleno.mayom.OCRScannerActivity" />
-        <activity android:name="id.ac.stiki.doleno.mayom.MainActivity"/> >
+        <activity android:name="id.ac.stiki.doleno.mayom.MainActivity"/>
         <activity android:name="id.ac.stiki.doleno.mayom.OcrCaptureActivity" />
         <meta-data
             android:name="com.google.android.gms.vision.DEPENDENCIES"

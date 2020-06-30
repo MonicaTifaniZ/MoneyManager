@@ -39,8 +39,8 @@
         android:color="#bdbdbd"/>
     <ProgressBar
         android:id="@+id/my_progress_bar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
         android:layout_above="@+id/tvVersion"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
