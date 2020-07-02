@@ -7,52 +7,59 @@
     android:background="#efefef"
     tools:context="id.ac.stiki.doleno.mayom.SplashScreenActivity">
 
-    <ImageView
-        android:layout_marginTop="12sp"
-        android:id="@+id/ivLogo"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/logo"
-        android:scaleType="fitXY"/>
-    <TextView
-        android:id="@+id/tvTulisan"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/ivLogo"
-        android:layout_marginTop="4dp"
-        android:text="Mayom"
-        android:textColor="#004ba0"
-        android:textSize="18sp"
-        android:textAlignment="center"
-        android:textStyle="bold"/>
-    <TextView
-        android:id="@+id/tvDeskripsi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tvTulisan"
-        android:layout_centerHorizontal="true"
-        android:text="Manage Your Money"
-        android:textAlignment="center"
-        android:textSize="8dp"
-        android:color="#bdbdbd"/>
-    <ProgressBar
-        android:id="@+id/my_progress_bar"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_above="@+id/tvVersion"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="15dp"/>
-    <TextView
-        android:id="@+id/tvVersion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="2dp"
-        android:text="Version 1.0"
-        android:textSize="8dp"
-        android:color="#bdbdbd"/>
+        android:orientation="vertical"
+        android:gravity="center">
+        <ImageView
+            android:layout_marginTop="12sp"
+            android:id="@+id/ivLogo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/logo"
+            android:scaleType="fitXY"/>
+        <TextView
+            android:id="@+id/tvTulisan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/ivLogo"
+            android:layout_marginTop="4dp"
+            android:text="Mayom"
+            android:textColor="#004ba0"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/tvDeskripsi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTulisan"
+            android:layout_centerHorizontal="true"
+            android:text="Manage Your Money"
+            android:textAlignment="center"
+            android:textSize="8dp"
+            android:color="#bdbdbd"/>
+        <ProgressBar
+            android:id="@+id/my_progress_bar"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_above="@+id/tvVersion"
+            android:layout_marginBottom="15dp"/>
+        <TextView
+            android:id="@+id/tvVersion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="2dp"
+            android:text="Version 1.0"
+            android:textSize="8dp"
+            android:color="#bdbdbd"/>
+
+
+    </LinearLayout>
+
 </RelativeLayout>

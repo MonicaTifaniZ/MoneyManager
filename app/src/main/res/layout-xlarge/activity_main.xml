@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center"
-            android:layout_marginBottom="40dp"
+            android:layout_marginBottom="8dp"
             android:layout_gravity="center">
 
             <TextView
@@ -58,7 +58,7 @@
             android:id="@+id/cvTextOCR"
             android:layout_margin="10dp"
             android:layout_width="300dp"
-            android:layout_height="250dp"
+            android:layout_height="wrap_content"
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
             app:cardElevation="0dp"
@@ -73,8 +73,8 @@
                 android:layout_gravity="center">
 
                 <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="90dp"
+                    android:layout_height="110dp"
                     android:src="@drawable/text_menu"
                     android:padding="10dp"
                     android:layout_marginTop="9dp"/>
@@ -93,7 +93,7 @@
             android:id="@+id/cvQR"
             android:layout_margin="10dp"
             android:layout_width="300dp"
-            android:layout_height="250dp"
+            android:layout_height="wrap_content"
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
             app:cardElevation="0dp"
@@ -108,8 +108,8 @@
                 android:gravity="center">
 
                 <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="90dp"
+                    android:layout_height="110dp"
                     android:src="@drawable/qr_menu"
                     android:padding="10dp"
                     android:layout_marginTop="9dp"/>
@@ -136,7 +136,7 @@
             android:id="@+id/cvReport"
             android:layout_margin="10dp"
             android:layout_width="300dp"
-            android:layout_height="250dp"
+            android:layout_height="wrap_content"
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
             app:cardElevation="0dp"
@@ -151,8 +151,8 @@
                 android:gravity="center">
 
                 <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="90dp"
+                    android:layout_height="110dp"
                     android:src="@drawable/report_menu"
                     android:padding="10dp"
                     android:layout_marginTop="9dp"/>
@@ -171,7 +171,7 @@
             android:id="@+id/cvHelp"
             android:layout_margin="10dp"
             android:layout_width="300dp"
-            android:layout_height="250dp"
+            android:layout_height="wrap_content"
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
             app:cardElevation="0dp"
@@ -186,8 +186,8 @@
                 android:gravity="center">
 
                 <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="90dp"
+                    android:layout_height="110dp"
                     android:src="@drawable/help_menu"
                     android:padding="10dp"
                     android:layout_marginTop="9dp"/>
@@ -213,7 +213,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/cvAbout"
             android:layout_width="600dp"
-            android:layout_height="250dp"
+            android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
@@ -228,8 +228,8 @@
                 android:layout_gravity="center"
                 android:gravity="center">
             <ImageView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="90dp"
+                android:layout_height="100dp"
                 android:src="@drawable/about_menu"
                 android:padding="10dp"/>
             <TextView

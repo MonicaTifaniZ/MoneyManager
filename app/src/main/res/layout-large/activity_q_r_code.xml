@@ -51,7 +51,7 @@
                     android:id="@+id/spKategori"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="12dp">
+                    android:layout_margin="2dp">
 
                 </Spinner>
 
@@ -86,13 +86,13 @@
 
                     <Button
                         android:id="@+id/btnTanggal"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="160dp"
+                        android:layout_width="66dp"
+                        android:layout_height="60dp"
                         android:layout_gravity="right"
-                        android:gravity="right"
+                        android:layout_marginLeft="210dp"
                         android:layout_toRightOf="@+id/etanggal"
                         android:background="@drawable/ic_date"
+                        android:gravity="right"
                         android:text="" />
 
                 </LinearLayout>
@@ -125,7 +125,7 @@
                         android:id="@+id/buttonScanQR"
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="100dp"
+                        android:layout_marginLeft="155dp"
                         android:background="@drawable/ic_scan"
                         android:textColor="@color/cardview_light_background" />
 

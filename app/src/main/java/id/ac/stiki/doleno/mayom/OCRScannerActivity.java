@@ -40,7 +40,6 @@ public class OCRScannerActivity extends Activity {
 
     DatabaseReference databaseReference ;
 
-    private int  REQUEST_CODE_PERMISSION = 101;
     private String TAG = "TAG";
 
 
@@ -114,6 +113,7 @@ public class OCRScannerActivity extends Activity {
         });
 
     }
+
 
     public void AmbilTanggal(){
         Calendar calendar = Calendar.getInstance();

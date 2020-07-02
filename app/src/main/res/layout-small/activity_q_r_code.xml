@@ -51,7 +51,7 @@
                     android:id="@+id/spKategori"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="2dp">
+                    android:layout_margin="1dp">
 
                 </Spinner>
 
@@ -88,7 +88,7 @@
                         android:id="@+id/btnTanggal"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:layout_marginLeft="20dp"
+                        android:layout_marginLeft="40dp"
                         android:layout_gravity="right"
                         android:gravity="right"
                         android:layout_toRightOf="@+id/etanggal"
@@ -125,8 +125,8 @@
                             android:id="@+id/buttonScanQR"
                             android:layout_width="25dp"
                             android:layout_height="25dp"
-                            android:layout_marginTop="1dp"
-                            android:layout_marginLeft="40dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginLeft="55dp"
                             android:background="@drawable/ic_scan"
                             android:textColor="@color/cardview_light_background" />
 
@@ -141,7 +141,7 @@
                 android:layout_margin="1dp"
                 android:background="#32912d"
                 android:text="Simpan data"
-                android:textSize="6sp"
+                android:textSize="10sp"
                 android:textColor="@android:color/white" />
         </LinearLayout>
 

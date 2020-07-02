@@ -80,7 +80,7 @@
                         android:ems="10"
                         android:layout_gravity="left|center"
                         android:inputType="number"
-                        android:textSize="14sp"
+                        android:textSize="12sp"
                         android:hint="Pilih Tanggal"
                         android:layout_marginLeft="9dp"/>
 
@@ -88,7 +88,7 @@
                         android:id="@+id/btnTanggal"
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="100dp"
+                        android:layout_marginLeft="80dp"
                         android:layout_gravity="right"
                         android:gravity="right"
                         android:layout_toRightOf="@+id/etanggal"
@@ -118,16 +118,16 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:hint="Pengeluaran anda.."
-                        android:textSize="14sp"
+                        android:textSize="12sp"
                         android:layout_marginBottom="9dp"/>
 
                     <Button
                         android:id="@+id/buttonScanQR"
-                        android:layout_width="50dp"
+                        android:layout_width="45dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="0dp"
                         android:layout_marginBottom="0dp"
-                        android:layout_marginLeft="135dp"
+                        android:layout_marginLeft="110dp"
                         android:background="@drawable/ic_scan"
                         android:textColor="@color/cardview_light_background" />
 

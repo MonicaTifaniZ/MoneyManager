@@ -85,9 +85,9 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
                             android:ems="10"
+                            android:textSize="12sp"
                             android:inputType="number"
                             android:hint="Pilih Tanggal"
-                            android:layout_gravity="left|center"
                             android:layout_marginRight="40dp"
                             android:layout_marginLeft="9dp"/>
 
@@ -95,7 +95,7 @@
                                 android:id="@+id/btnTanggal"
                                 android:layout_width="50dp"
                                 android:layout_height="wrap_content"
-                                android:layout_marginLeft="60dp"
+                                android:layout_marginLeft="50dp"
                                 android:layout_gravity="right"
                                 android:gravity="right"
                                 android:layout_toRightOf="@+id/etanggal"
@@ -122,15 +122,16 @@
 
                             <EditText
                                 android:id="@+id/editTextQRTotal"
-                                android:layout_width="270dp"
+                                android:layout_width="230dp"
                                 android:layout_height="wrap_content"
-                                android:layout_marginLeft="10dp"
+                                android:layout_marginLeft="9dp"
                                 android:hint="Pengeluaran anda.."
+                                android:textSize="12sp"
                                 android:layout_marginBottom="9dp"/>
 
                             <Button
                                 android:id="@+id/buttonOCR"
-                                android:layout_width="50dp"
+                                android:layout_width="45dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="0dp"
                                 android:layout_marginBottom="0dp"

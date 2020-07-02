@@ -7,14 +7,14 @@
     android:layout_height="match_parent"
     tools:context="id.ac.stiki.doleno.mayom.AboutActivity"
     android:orientation="vertical"
-    android:layout_marginBottom="20dp"
+    android:layout_marginBottom="10dp"
     android:background="@drawable/bg">
 
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="2dp"
         android:text="About Us"
         android:textColor="@android:color/black"
         android:textSize="40sp"
@@ -28,7 +28,7 @@
         app:cardCornerRadius="9dp"
         android:innerRadius="0dp"
         android:padding="9dp"
-        android:layout_margin="14dp"
+        android:layout_margin="5dp"
         android:layout_marginTop="25dp"
         android:shape="ring">
         <LinearLayout
@@ -40,7 +40,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_gravity="center"
                 android:gravity="center">
@@ -50,7 +50,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:layout_marginTop="9dp"
-                    android:gravity="start|center">
+                    android:gravity="center">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -61,8 +61,8 @@
 
                     <ImageView
                         android:id="@+id/image_stiki"
-                        android:layout_width="110dp"
-                        android:layout_height="110dp"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
                         android:layout_gravity="center"
                         android:layout_margin="14dp"
                         android:src="@drawable/stiki"
@@ -113,8 +113,8 @@
 
                     <ImageView
                         android:id="@+id/image_mon"
-                        android:layout_width="110dp"
-                        android:layout_height="100dp"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
                         android:layout_gravity="center"
                         android:layout_margin="14dp"
                         android:src="@drawable/mon"
@@ -129,7 +129,6 @@
                         android:text="Monica Tifani Zahara"
                         android:textStyle="bold"
                         android:layout_marginBottom="2dp"
-                        android:layout_marginTop="8dp"
                         android:textColor="@color/common_google_signin_btn_text_dark_focused"/>
 
                     <TextView
@@ -152,45 +151,36 @@
 
                 </LinearLayout>
 
+
             </LinearLayout>
 
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:orientation="vertical"
-                android:gravity="center_vertical">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp">
 
-                <LinearLayout
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="start"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/logo_mayo"
+                    android:contentDescription="TODO" />
+
+                <TextView
+                    android:id="@+id/ket"
+                    android:ems="2"
+                    android:textStyle="normal"
+                    android:textSize="12sp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="6dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="12dp">
+                    android:text="@string/keterangan">
 
-                    <ImageView
-                        android:layout_width="150dp"
-                        android:layout_height="150dp"
-                        android:layout_gravity="start"
-                        android:layout_marginTop="50dp"
-                        android:layout_marginBottom="12dp"
-                        android:scaleType="center"
-                        android:src="@drawable/logo_mayo"
-                        android:contentDescription="TODO" />
-
-                    <TextView
-                        android:id="@+id/ket"
-                        android:ems="2"
-                        android:textStyle="normal"
-                        android:layout_marginEnd="15dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/keterangan">
-
-                    </TextView>
-
-                </LinearLayout>
-
+                </TextView>
 
             </LinearLayout>
 
