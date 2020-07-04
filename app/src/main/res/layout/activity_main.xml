@@ -1,122 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="10dp"
     android:background="@drawable/bg"
-    android:gravity="center"
-    android:id="@+id/ll"
     tools:context="id.ac.stiki.doleno.mayom.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:gravity="center"
-        android:layout_gravity="center">
+        android:gravity="center">
 
-        <TextView
-            android:id="@+id/textGrid"
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_centerHorizontal="true"
-            android:text="@string/title"
-            android:textColor="@android:color/black"
-            android:textSize="32sp"
-            android:textStyle="bold"
-            android:textAlignment="center"/>
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/deskrispi"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/textGrid"
-            android:text="Manage Your Money. Let's Start!"
-            android:textColor="@android:color/black"
-            android:textSize="13sp"
-            android:textAlignment="center"/>
+            <TextView
+                android:id="@+id/textGrid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="@string/title"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="32sp"
+                android:textStyle="bold" />
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/deskrispi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textGrid"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="Manage Your Money. Let's Start!"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="13sp" />
+
+        </LinearLayout>
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:clipToPadding="false"
         android:gravity="center"
-        android:orientation="horizontal"
-        android:clipToPadding="false">
+        android:orientation="horizontal">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cvTextOCR"
-            android:layout_margin="10dp"
-            android:layout_width="160dp"
+            android:layout_width="130dp"
             android:layout_height="190dp"
-            android:foreground="?android:attr/selectableItemBackground"
+            android:layout_margin="10dp"
             android:clickable="true"
-            app:cardElevation="0dp"
+            android:foreground="?android:attr/selectableItemBackground"
             app:cardCornerRadius="8dp"
+            app:cardElevation="0dp"
             app:cardUseCompatPadding="true">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center">
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:orientation="vertical">
 
                 <ImageView
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:src="@drawable/text_menu"
+                    android:layout_marginTop="9dp"
                     android:padding="10dp"
-                    android:layout_marginTop="9dp"/>
+                    android:src="@drawable/text_menu" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textStyle="bold"
                     android:layout_marginTop="10dp"
-                    android:text="@string/menu_text"/>
+                    android:text="@string/menu_text"
+                    android:textStyle="bold" />
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cvQR"
-            android:layout_margin="10dp"
-            android:layout_width="160dp"
+            android:layout_width="130dp"
             android:layout_height="190dp"
-            android:foreground="?android:attr/selectableItemBackground"
+            android:layout_margin="10dp"
             android:clickable="true"
-            app:cardElevation="0dp"
+            android:foreground="?android:attr/selectableItemBackground"
             app:cardCornerRadius="8dp"
+            app:cardElevation="0dp"
             app:cardUseCompatPadding="true">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center">
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:orientation="vertical">
 
                 <ImageView
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:src="@drawable/qr_menu"
+                    android:layout_marginTop="9dp"
                     android:padding="10dp"
-                    android:layout_marginTop="9dp"/>
+                    android:src="@drawable/qr_menu" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textStyle="bold"
                     android:layout_marginTop="10dp"
-                    android:text="@string/menu_qr"/>
+                    android:text="@string/menu_qr"
+                    android:textStyle="bold" />
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -126,13 +131,13 @@
         android:clipToPadding="false"
         android:gravity="center"
         android:orientation="horizontal"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cvReport"
             android:layout_margin="10dp"
-            android:layout_width="160dp"
+            android:layout_width="130dp"
             android:layout_height="190dp"
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
@@ -143,8 +148,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center">
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:orientation="vertical">
 
                 <ImageView
                     android:layout_width="64dp"
@@ -166,7 +172,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/cvHelp"
             android:layout_margin="10dp"
-            android:layout_width="160dp"
+            android:layout_width="130dp"
             android:layout_height="190dp"
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
@@ -177,8 +183,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center">
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:orientation="vertical">
 
                 <ImageView
                     android:layout_width="64dp"
@@ -202,12 +209,12 @@
         android:clipToPadding="false"
         android:gravity="center"
         android:orientation="horizontal"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cvAbout"
-            android:layout_width="340dp"
+            android:layout_width="300dp"
             android:layout_height="150dp"
             android:layout_margin="10dp"
             android:foreground="?android:attr/selectableItemBackground"
@@ -218,9 +225,11 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:gravity="center">
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
                 <ImageView
                     android:layout_width="64dp"
                     android:layout_height="64dp"
@@ -237,4 +246,7 @@
         </androidx.cardview.widget.CardView>
     </LinearLayout>
 
-</LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

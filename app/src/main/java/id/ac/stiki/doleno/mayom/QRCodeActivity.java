@@ -16,7 +16,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -92,7 +91,13 @@ public class QRCodeActivity extends Activity {
         buttonScan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                StartScan();
+//                scan = true;
+//                StartScan();
+                try{
+                    StartScan();
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
             }
         });
 
@@ -116,41 +121,20 @@ public class QRCodeActivity extends Activity {
 
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
-        if (result != null){
+        if (result != null && resultCode != RESULT_CANCELED) {
             matcher = regex.matcher(result.getContents());
             if (matcher.find()) {
                 edittextQRTotal.setText(String.valueOf(result.getContents()));
                 pengeluaran = result.getContents();
 
-
-            }else {
+            } else {
                 Toast.makeText(this, "Hasil tidak ditemukan", Toast.LENGTH_SHORT).show();
-                // jika qrcode berisi data
-//                try {
-//                    // converting the data json]
-//                    JSONObject object = new JSONObject(result.getContents());
-//
-//                    // atur nilai ke textviews
-//                    textViewTanggal.setText(object.getString("nama"));
-//                     textViewQRTotal.setText(String.valueOf(object.getDouble(toString())));
-//
-//
-//                } catch (JSONException e) {
-//                    e.printStackTrace();
-//                    // jika format encoded tidak sesuai maka hasil
-//                    // ditampilkan ke toast
-//                    Toast.makeText(this, result.getContents(), Toast.LENGTH_SHORT).show();
-//                }
-
 
             }
-
         }
-        super.onActivityResult(requestCode, resultCode, data);
-
-
+            super.onActivityResult(requestCode, resultCode, data);
     }
 
     public void StartScan(){
@@ -158,8 +142,6 @@ public class QRCodeActivity extends Activity {
         intentIntegrator = new IntentIntegrator(this);
         intentIntegrator.initiateScan();
     }
-
-
 
     public void AmbilTanggal(){
         Calendar calendar = Calendar.getInstance();
